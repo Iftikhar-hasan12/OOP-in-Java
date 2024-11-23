@@ -1,38 +1,46 @@
-/*Write a Java program to create a class called Animal with a method named move().
-Create a subclass called Cheetah that overrides the move() method to run.*/
+/*Create an interface named as “Container” which contains the signature of two
+methods one is public int add() which calculates the summation of two numbers and another
+one is public void findMax(). Now create another class named as DataFrame which will implement the 
+two methods of Container interface. Now create another Test class with the main method
+to check your designed class and interface with various data.*/
 
-package com.mycompany.mid;
+package lolita;
 
-class Animal{
-    void move()
-    {
-        System.out.println("Animal Move");
-        
-    }
+
+interface Container {
+    public int add();
+    void findMax();
+    
 }
 
-class Cheetah extends Animal{
+
+class DataFrame implements Container {
+    int a, b;
+    DataFrame(int a, int b){
+        
+        this.a=a;
+        this.b=b;
+    }
   
-    
     @Override
-    void move()
-    {
-        System.out.println("Cheetah Move ");
-        
+    public int add(){
+        return a+b;
+    }
+    @Override
+  public  void findMax(){
+        System.out.println("Max : "+((a>b)?a:b));
     }
     
 }
 
+public class Lolita {
 
-
-public class Mid {
-
+   
     public static void main(String[] args) {
- 
-        Animal a = new Animal();
-
-        a.move();
-             a = new Cheetah();
-                    a.move();
+       DataFrame a = new DataFrame(10,20);
+       a.findMax();
+        System.out.println("Sum : "+a.add());
+        
     }
+    
 }
