@@ -1,43 +1,52 @@
-/*Write a Java program to create a class called Employee with methods called work() and getSalary(). 
-Create a subclass called HRManager that overrides the work() 
-method and adds a new method called addEmployee().*/
+/*Write a Java program to create an interface Resizable with methods resizeWidth(int width) and
+resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the
+Resizable interface and implements the resize methods.*/
 
-package com.mycompany.mid;
+package ftp;
 
-class Employee{
-    
-    void work()
-    {
-        
-    }
-    double getSalary()
-    {
-        return 0;
-    }
-    
-    
+interface A {
+
+    void resizeHeight(int h);
+
+    void resizeWeight(int w);
+
 }
 
-class HRManager extends Employee{
-     
-      @Override
-      void work()
-    {
-        
+class Rectangle implements A {
+
+    private int height, weight;
+
+    Rectangle(int h, int w) {
+        height = h;
+        weight = w;
     }
-      
-      void AddnewEmployee()
-      {
-          
-      }
-      
-      
+
+    @Override
+    public void resizeHeight(int h) {
+        height = h;
+
+    }
+
+    @Override
+    public void resizeWeight(int w) {
+        weight = w;
+    }
+
+    void print() {
+        System.out.println("Height  : " + height + " \n Weight : " + weight);
+    }
+
 }
 
-public class Mid {
+public class FTP {
 
     public static void main(String[] args) {
 
-     
+        Rectangle r = new Rectangle(10, 20);
+        r.print();
+        r.resizeHeight(30);
+        r.resizeWeight(40);
+        r.print();
+
     }
 }
