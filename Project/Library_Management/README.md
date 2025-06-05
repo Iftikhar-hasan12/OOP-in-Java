@@ -1,5 +1,3 @@
-:
-
 📚 Library Management System (Java + Swing + MySQL)
 This is a Java-based Library Management System built using Swing for GUI and MySQL for backend storage.
 The system supports two interfaces: Admin and Student. Key features include issuing and returning books, viewing book/member lists, managing members and books, viewing issue history, and more — all integrated with a MySQL database. The system dynamically retrieves and updates data via the database to ensure real-time accuracy.
